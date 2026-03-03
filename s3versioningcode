@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowReplication",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::182264891712:role/service-role/s3crr_role_for_srishti-s31" #ask_source_destination_for_arn
+            },
+            "Action": [
+                "s3:ReplicateObject",
+                "s3:ReplicateDelete",
+                "s3:ReplicateTags",
+                "s3:ObjectOwnerOverrideToBucketOwner",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::usa-s3-bucket-of-aryan/*"
+        }
+    ]
+}
